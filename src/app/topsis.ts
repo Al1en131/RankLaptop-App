@@ -1,5 +1,10 @@
+interface Alternative {
+  name: string;
+  criteria: number[];
+}
+
 export function topsis(
-  alternatives: any[],
+  alternatives: Alternative[],
   weights: number[],
   impacts: ("+" | "-")[]
 ) {

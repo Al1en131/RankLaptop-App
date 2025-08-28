@@ -11,14 +11,26 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+// tipe untuk laptop yang dimasukkan user
+type Laptop = {
+  name: string;
+  processor: string;
+  criteria: number[];
+};
+
+// tipe untuk hasil topsis
+type RankingResult = {
+  name: string;
+  score: number;
+};
 export default function Ranking() {
-  const [alternatives, setAlternatives] = useState<any[]>([]);
+  const [alternatives, setAlternatives] = useState<Laptop[]>([]);
   const [name, setName] = useState("");
   const [harga, setHarga] = useState<number | "">("");
   const [ram, setRam] = useState("");
   const [storage, setStorage] = useState<number | "">("");
   const [processor, setProcessor] = useState("Intel Core i3");
-  const [result, setResult] = useState<any[]>([]);
+  const [result, setResult] = useState<RankingResult[]>([]);
   const [showModal, setShowModal] = useState(false);
 
   const processorValue: Record<string, number> = {
