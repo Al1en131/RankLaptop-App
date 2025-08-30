@@ -141,7 +141,7 @@ export default function Ranking() {
         />
       </section>
 
-      <section className="px-14 py-16 bg-gray-50  ">
+      <section className="px-14 py-16 bg-gray-50">
         {/* Data Laptop */}
         {alternatives.length > 0 && (
           <div className=" mx-auto mb-12 ">
@@ -234,7 +234,7 @@ export default function Ranking() {
         )}
         {/* Tombol Hitung */}
         {alternatives.length > 1 && (
-          <div className="text-center mt-6">
+          <div className="text-center mb-8">
             <button
               onClick={calculate}
               className="bg-[#446BA6] hover:bg-[#36588A] w-full flex justify-center items-center gap-2 text-white px-6 py-3 rounded-xl shadow-md transition"
